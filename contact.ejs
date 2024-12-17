@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Your Name">
+    <title>Contact Us</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="/css/blog.css" rel="stylesheet">
+
+    <style>
+      .contact-container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .contact-heading {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+      }
+      .contact-details {
+        list-style: none;
+        padding: 0;
+      }
+      .contact-details li {
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <%- include('./navbar'); %>
+    </header>
+
+    <main class="container">
+      <div class="contact-container">
+        <h1 class="contact-heading">Contact Us</h1>
+        <p>If you need assistance, feel free to reach out to us through the details below:</p>
+        <ul class="contact-details">
+          <li><strong>Name:</strong> Pon</li>
+          <li><strong>Email:</strong> panjapat.phakjirunthanin@g.swu.ac.th</li>
+          <li><strong>Name:</strong> Punch</li>
+          <li><strong>Email:</strong> phantipha.sripadupwong@g.swu.ac.th</li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="blog-footer">
+        <%- include('./footer'); %>
+      </footer>
+  </body>
+</html>

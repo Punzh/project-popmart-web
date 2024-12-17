@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Own Thread</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffffff;
+    }
+    .container {
+      background-color: rgb(255, 194, 245);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    .create-thread-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 15px; /* Smaller padding */
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      display: inline-block; /* Ensures it doesn't take full width */
+    }
+    .create-thread-btn:hover {
+      background-color: #45a049;
+    }
+    .thread-form {
+      display: none;
+      margin-top: 15px;
+    }
+    .textbox {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <button class="create-thread-btn" onclick="toggleThreadForm()">Create Thread</button>
+
+    <!-- Thread creation form (hidden by default) -->
+    <div class="thread-form">
+      <h2>Create Your Thread</h2>
+      <form action="/user/thread" method="POST">
+        <textarea class="textbox" name="description" rows="4" placeholder="Enter thread content here..."></textarea>
+        <input type="hidden" name="email" value="<%= UserData.email %>">
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Function to toggle the visibility of the thread creation form
+    function toggleThreadForm() {
+      const form = document.querySelector('.thread-form');
+      form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>

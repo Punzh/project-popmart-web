@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Home</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/blog/"> 
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <style>
+      .feature-box {
+        background-color :white
+      }
+      .feature-box-padding {
+        padding-top: 10px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <head>
+      <%- include('./navbar'); %>
+    </head>
+
+    <main class="container">
+      <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">We meet again <%= UserData.email %></h1>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">Welcome back</a></p>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static feature-box">
+              <strong class="d-inline-block mb-2 text-primary">Featured Figure</strong>
+              <h3 class="mb-0">Labubu Beach Figure</h3><br></br>
+              <p class="card-text mb-auto ">Labubu, the art toy craze and why grown-ups can’t get enough</p>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://popmart-nongpol-2.s3.us-east-1.amazonaws.com/images/labubu.jpeg" alt="Thumbnail" width="200" height="250" style="object-fit: cover;">
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static feature-box">
+              <strong class="d-inline-block mb-2 text-success">Featured Figure</strong>
+              <h3 class="mb-0">SKULLPANDA The Stocking Surprise</h3>
+              
+              <p class="mb-auto feature-box-padding">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://popmart-nongpol-2.s3.us-east-1.amazonaws.com/images/SKULLPANDA+The+Stocking+Surprise+Figure+%E0%B8%A3%E0%B8%B2%E0%B8%84%E0%B8%B21%2C050.jpg" alt="Thumbnail" width="200" height="250" style="object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer class="blog-footer">
+      <%- include('./footer'); %>
+    </footer>
+  </body>
+</html>
